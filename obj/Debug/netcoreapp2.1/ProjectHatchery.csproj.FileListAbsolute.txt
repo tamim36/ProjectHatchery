@@ -1,0 +1,11 @@
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\obj\Debug\netcoreapp2.1\ProjectHatchery.csprojAssemblyReference.cache
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\obj\Debug\netcoreapp2.1\ProjectHatchery.csproj.CoreCompileInputs.cache
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\obj\Debug\netcoreapp2.1\ProjectHatchery.AssemblyInfoInputs.cache
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\obj\Debug\netcoreapp2.1\ProjectHatchery.AssemblyInfo.cs
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\bin\Debug\netcoreapp2.1\ProjectHatchery.deps.json
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\bin\Debug\netcoreapp2.1\ProjectHatchery.runtimeconfig.json
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\bin\Debug\netcoreapp2.1\ProjectHatchery.runtimeconfig.dev.json
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\bin\Debug\netcoreapp2.1\ProjectHatchery.dll
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\bin\Debug\netcoreapp2.1\ProjectHatchery.pdb
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\obj\Debug\netcoreapp2.1\ProjectHatchery.dll
+C:\Users\tamim\source\repos\ProjectHatchery\ProjectHatchery\obj\Debug\netcoreapp2.1\ProjectHatchery.pdb
