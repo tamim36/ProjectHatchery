@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProjectHatchery
+namespace ProjectHatchery.EventDeclaration
 {
     class Market
     {

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ProjectHatchery.EventDeclaration;
+using ProjectHatchery.SellingEvent;
 
-namespace ProjectHatchery
+namespace ProjectHatchery.BuyingEvent
 {
     public class Owner
     {
@@ -14,7 +16,7 @@ namespace ProjectHatchery
                 var hatchery = new Hatchery();
 
 
-                Console.WriteLine(" For Rui - 1\n For Katla - 2\n For Ilish - 3\n");
+                Console.WriteLine(" For Rui - 1\n For Katla - 2\n For Ilish - 3\n To Quit - 0\n");
                 int fishNo = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Enter amount to buy - ");
@@ -26,16 +28,25 @@ namespace ProjectHatchery
                     market.buyEvent += hatchery.OnRuiBuy;
                     market.raiseBuyEvent(amount);
                 }
-                if (fishNo == 2)
+                else if (fishNo == 2)
                 {
                     market.buyEvent += hatchery.OnKatlaBuy;
                     market.raiseBuyEvent(amount);
                 }
-                if (fishNo == 3)
+                else if (fishNo == 3)
                 {
                     market.buyEvent += hatchery.OnIlishBuy;
                     market.raiseBuyEvent(amount);
                 }
+                else if (fishNo == 0)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Input");
+                }
+
 
                 Console.WriteLine("Available Fish in Fish Tank -\n Rui - {0}\n Katla - {1}\n Ilish - {2}\n", FishTank.rui, FishTank.katla, FishTank.ilish);
 

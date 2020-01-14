@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ProjectHatchery.EventDeclaration;
 
-namespace ProjectHatchery
+namespace ProjectHatchery.SellingEvent
 {
     public class MarketInventory
     {
