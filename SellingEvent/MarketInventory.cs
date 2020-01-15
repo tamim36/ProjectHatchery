@@ -13,11 +13,11 @@ namespace ProjectHatchery.SellingEvent
 
         public void OnRuiSell(object source, FishAmountArgs e)
         {
-            if ((marketStore.getRui() - e.amount) >= 0)
+            if ((marketStore.getRuiList().Count - e.amount) >= 0)
             {
-                temp = marketStore.getRui();
+                temp = marketStore.getRuiList().Count;
                 temp -= e.amount;
-                marketStore.setRui(temp);
+                marketStore.setRuiList(temp);
             }
             else
             {
@@ -27,11 +27,11 @@ namespace ProjectHatchery.SellingEvent
 
         public void OnKatlaSell(object source, FishAmountArgs e)
         {
-            if ((marketStore.getKatla() - e.amount) >= 0)
+            if ((marketStore.getKatlaList().Count - e.amount) >= 0)
             {
-                temp = marketStore.getKatla();
+                temp = marketStore.getKatlaList().Count;
                 temp -= e.amount;
-                marketStore.setKatla(temp);
+                marketStore.setKatlaList(temp);
             }
             else
             {
@@ -41,11 +41,11 @@ namespace ProjectHatchery.SellingEvent
 
         public void OnIlishSell(object source, FishAmountArgs e)
         {
-            if ((marketStore.getIlish() - e.amount) >= 0)
+            if ((marketStore.getIlishList().Count - e.amount) >= 0)
             {
-                temp = marketStore.getIlish();
+                temp = marketStore.getIlishList().Count;
                 temp -= e.amount;
-                marketStore.setIlish(temp);
+                marketStore.setIlishList(temp);
             }
             else
             {

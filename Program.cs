@@ -3,6 +3,8 @@ using ProjectHatchery.BuyingEvent;
 using ProjectHatchery.SellingEvent;
 using System.Threading;
 using ProjectHatchery.FishStorage;
+using ProjectHatchery.AvailableFish;
+using System.Collections.Generic;
 
 namespace ProjectHatchery
 {

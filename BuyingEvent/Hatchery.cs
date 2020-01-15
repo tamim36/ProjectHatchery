@@ -15,15 +15,15 @@ namespace ProjectHatchery.BuyingEvent
 
         public void OnRuiBuy(object source, FishAmountArgs e)
         {
-            if((insFishTank.getRui() - e.amount) >= 0){
+            if((insFishTank.getRuiList().Count - e.amount) >= 0){
                 Console.WriteLine("rui buy");
-                temp = insFishTank.getRui();
+                temp = insFishTank.getRuiList().Count;
                 temp -= e.amount;
-                insFishTank.setRui(temp);
+                insFishTank.setRuiList(temp);
 
-                temp = marketStore.getRui();
+                temp = marketStore.getRuiList().Count;
                 temp += e.amount;
-                marketStore.setRui(temp);
+                marketStore.setRuiList(temp);
             }
             else
             {
@@ -33,15 +33,15 @@ namespace ProjectHatchery.BuyingEvent
 
         public void OnKatlaBuy(object source, FishAmountArgs e)
         {
-            if ((insFishTank.getKatla() - e.amount) >= 0)
+            if ((insFishTank.getKatlaList().Count - e.amount) >= 0)
             {
-                temp = insFishTank.getKatla();
+                temp = insFishTank.getKatlaList().Count;
                 temp -= e.amount;
-                insFishTank.setKatla(temp);
+                insFishTank.setKatlaList(temp);
 
-                temp = marketStore.getKatla();
+                temp = marketStore.getKatlaList().Count;
                 temp += e.amount;
-                marketStore.setKatla(temp);
+                marketStore.setKatlaList(temp);
             }
             else
             {
@@ -51,15 +51,15 @@ namespace ProjectHatchery.BuyingEvent
 
         public void OnIlishBuy(object source, FishAmountArgs e)
         {
-            if ((insFishTank.getIlish() - e.amount) >= 0)
+            if ((insFishTank.getIlishList().Count - e.amount) >= 0)
             {
-                temp = insFishTank.getIlish();
+                temp = insFishTank.getIlishList().Count;
                 temp -= e.amount;
-                insFishTank.setIlish(temp);
+                insFishTank.setIlishList(temp);
 
-                temp = marketStore.getIlish();
+                temp = marketStore.getIlishList().Count;
                 temp += e.amount;
-                marketStore.setIlish(temp);
+                marketStore.setIlishList(temp);
             }
             else
             {

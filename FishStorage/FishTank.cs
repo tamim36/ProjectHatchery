@@ -1,18 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ProjectHatchery.AvailableFish;
 
 namespace ProjectHatchery.FishStorage
 {
     class FishTank
     {
-        private int rui = 1000, katla = 1000, ilish = 1000;
-
+        private List<Rui> RuiList = new List<Rui>();
+        private List<Katla> KatlaList = new List<Katla>();
+        private List<Ilish> IlishList = new List<Ilish>();
 
         private static FishTank _instance;
         private static readonly object _lock = new object();
 
-        private FishTank() { }
+        private FishTank()
+        {
+            for (int i = 0; i < 1000; i++)
+            {
+                RuiList.Add(new Rui());
+                KatlaList.Add(new Katla());
+                IlishList.Add(new Ilish());
+            }
+        }
+
 
         public static FishTank getInstanceFishTank()
         {
@@ -29,31 +40,46 @@ namespace ProjectHatchery.FishStorage
             return _instance;
         }
 
-        public int getRui()
+        public List<Rui> getRuiList()
         {
-            return rui;
-        }
-        public void setRui(int num)
-        {
-            rui = num;
+            return RuiList;
         }
 
-        public int getKatla()
+        public void setRuiList(int num)
         {
-            return katla;
-        }
-        public void setKatla(int num)
-        {
-            katla = num;
+            RuiList.Clear();
+            for (int i = 0; i < num; i++)
+            {
+                RuiList.Add(new Rui());
+            }
         }
 
-        public int getIlish()
+        public List<Katla> getKatlaList()
         {
-            return ilish;
+            return KatlaList;
         }
-        public void setIlish(int num)
+
+        public void setKatlaList(int num)
         {
-            ilish = num;
+            KatlaList.Clear();
+            for (int i = 0; i < num; i++)
+            {
+                KatlaList.Add(new Katla());
+            }
+        }
+
+        public List<Ilish> getIlishList()
+        {
+            return IlishList;
+        }
+
+        public void setIlishList(int num)
+        {
+            IlishList.Clear();
+            for (int i = 0; i < num; i++)
+            {
+                IlishList.Add(new Ilish());
+            }
         }
     }
 }

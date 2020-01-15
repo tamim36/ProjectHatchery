@@ -56,7 +56,7 @@ namespace ProjectHatchery.BuyingEvent
             "(1) Rui - {0}   . . . . . . . . . .   (1) Rui - {3}\n" +
             "(2) Katla - {1}   . . . . . . . . .   (2) Katla - {4}\n" +
             "(3) Ilish - {2}   . . . . . . . . .   (3) Ilish - {5}\n",
-            marketStore.getRui(), marketStore.getKatla(), marketStore.getIlish(), insFishTank.getRui(), insFishTank.getKatla(), insFishTank.getIlish());
+            marketStore.getRuiList().Count, marketStore.getKatlaList().Count, marketStore.getIlishList().Count, insFishTank.getRuiList().Count, insFishTank.getKatlaList().Count, insFishTank.getIlishList().Count);
             }
         }
     }
