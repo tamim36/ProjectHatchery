@@ -3,17 +3,27 @@ using System.Collections.Generic;
 using System.Text;
 using ProjectHatchery.EventDeclaration;
 using ProjectHatchery.SellingEvent;
+using ProjectHatchery.FishStorage;
 
 namespace ProjectHatchery.BuyingEvent
 {
     public class Hatchery
     {
+        FishTank insFishTank = FishTank.getInstanceFishTank();
+        MarketStore marketStore = MarketStore.getInstanceMarketStore();
+        private int temp;
+
         public void OnRuiBuy(object source, FishAmountArgs e)
         {
-            if((FishTank.rui - e.amount) >= 0){
+            if((insFishTank.getRui() - e.amount) >= 0){
                 Console.WriteLine("rui buy");
-                FishTank.rui -= e.amount;
-                MarketInventory.rui += e.amount;
+                temp = insFishTank.getRui();
+                temp -= e.amount;
+                insFishTank.setRui(temp);
+
+                temp = marketStore.getRui();
+                temp += e.amount;
+                marketStore.setRui(temp);
             }
             else
             {
@@ -23,11 +33,15 @@ namespace ProjectHatchery.BuyingEvent
 
         public void OnKatlaBuy(object source, FishAmountArgs e)
         {
-            if ((FishTank.katla - e.amount) >= 0)
+            if ((insFishTank.getKatla() - e.amount) >= 0)
             {
-                Console.WriteLine("katla buy");
-                FishTank.katla -= e.amount;
-                MarketInventory.katla += e.amount;
+                temp = insFishTank.getKatla();
+                temp -= e.amount;
+                insFishTank.setKatla(temp);
+
+                temp = marketStore.getKatla();
+                temp += e.amount;
+                marketStore.setKatla(temp);
             }
             else
             {
@@ -37,10 +51,15 @@ namespace ProjectHatchery.BuyingEvent
 
         public void OnIlishBuy(object source, FishAmountArgs e)
         {
-            if ((FishTank.ilish - e.amount) >= 0)
+            if ((insFishTank.getIlish() - e.amount) >= 0)
             {
-                FishTank.ilish -= e.amount;
-                MarketInventory.ilish += e.amount;
+                temp = insFishTank.getIlish();
+                temp -= e.amount;
+                insFishTank.setIlish(temp);
+
+                temp = marketStore.getIlish();
+                temp += e.amount;
+                marketStore.setIlish(temp);
             }
             else
             {

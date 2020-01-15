@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using ProjectHatchery.EventDeclaration;
+using ProjectHatchery.FishStorage;
 
 namespace ProjectHatchery.SellingEvent
 {
     class Customer
     {
+        MarketStore marketStore = MarketStore.getInstanceMarketStore();
+        FishTank insFishTank = FishTank.getInstanceFishTank();
         public void task()
         {
             while (true)
@@ -43,7 +46,15 @@ namespace ProjectHatchery.SellingEvent
                 {
                     Console.WriteLine("Invalid Input");
                 }
-                Console.WriteLine("Available Fish -\n Rui - {0}\n Katla - {1}\n Ilish - {2}\n", MarketInventory.rui, MarketInventory.katla, MarketInventory.ilish);
+                Console.WriteLine("Available Fish -\n Rui - {0}\n Katla - {1}\n Ilish - {2}\n", marketStore.getRui(), marketStore.getKatla(), marketStore.getIlish());
+
+                Console.WriteLine(
+            "All Available Fish -- \n" +
+            "in Market Store   . . . . . . . .   in Fish Tank\n" +
+            "(1) Rui - {0}   . . . . . . . . . .   (1) Rui - {3}\n" +
+            "(2) Katla - {1}   . . . . . . . . .   (2) Katla - {4}\n" +
+            "(3) Ilish - {2}   . . . . . . . . .   (3) Ilish - {5}\n",
+            marketStore.getRui(), marketStore.getKatla(), marketStore.getIlish(), insFishTank.getRui(), insFishTank.getKatla(), insFishTank.getIlish());
             }
         }
     }

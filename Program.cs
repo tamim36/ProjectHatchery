@@ -2,6 +2,7 @@
 using ProjectHatchery.BuyingEvent;
 using ProjectHatchery.SellingEvent;
 using System.Threading;
+using ProjectHatchery.FishStorage;
 
 namespace ProjectHatchery
 {
@@ -14,9 +15,11 @@ namespace ProjectHatchery
             int userType = Convert.ToInt32(Console.ReadLine());
 
             // Creating new Thread
-            ThreadStart childref = new ThreadStart(ThreadGenerateFish.GeneratingFish);
+            ThreadGenerateFish _instance = new ThreadGenerateFish();
+            ThreadStart childref = new ThreadStart(_instance.GeneratingFish);
             Thread childThread = new Thread(childref);
             childThread.Start();
+
 
             if (userType == 1)
             {

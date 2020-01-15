@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using System.Text;
 using ProjectHatchery.EventDeclaration;
+using ProjectHatchery.FishStorage;
 
 namespace ProjectHatchery.SellingEvent
 {
     public class MarketInventory
     {
-        public static int rui = 100, katla = 100, ilish = 100;
+        MarketStore marketStore = MarketStore.getInstanceMarketStore();
+        private int temp;
 
         public void OnRuiSell(object source, FishAmountArgs e)
         {
-            if ((rui - e.amount) >= 0)
+            if ((marketStore.getRui() - e.amount) >= 0)
             {
-                rui = rui - e.amount;
+                temp = marketStore.getRui();
+                temp -= e.amount;
+                marketStore.setRui(temp);
             }
             else
             {
@@ -23,9 +27,11 @@ namespace ProjectHatchery.SellingEvent
 
         public void OnKatlaSell(object source, FishAmountArgs e)
         {
-            if ((katla - e.amount) >= 0)
+            if ((marketStore.getKatla() - e.amount) >= 0)
             {
-                katla = katla - e.amount;
+                temp = marketStore.getKatla();
+                temp -= e.amount;
+                marketStore.setKatla(temp);
             }
             else
             {
@@ -35,9 +41,11 @@ namespace ProjectHatchery.SellingEvent
 
         public void OnIlishSell(object source, FishAmountArgs e)
         {
-            if ((ilish - e.amount) >= 0)
+            if ((marketStore.getIlish() - e.amount) >= 0)
             {
-                ilish = ilish - e.amount;
+                temp = marketStore.getIlish();
+                temp -= e.amount;
+                marketStore.setIlish(temp);
             }
             else
             {
